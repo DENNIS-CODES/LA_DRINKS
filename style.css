@@ -1,0 +1,422 @@
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  /* Add a black background color to the top navigation */
+.topnav {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: rgb(0, 0, 0);
+    color: black;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    text-decoration-color: #4CAF50;
+    
+  }
+  
+  /* Centered section inside the top navigation */
+  .topnav-centered a {
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  /* Right-aligned section inside the top navigation */
+  .topnav-right {
+    float: right;
+  }
+  
+  /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav-right {
+      float: none;
+      display: block;
+    }
+  
+    .topnav-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+  .grid-container{
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    height: 100%;
+  }
+  .header{
+    grid-area: header;
+  }
+  section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  section:nth-of-type(1) {
+    background-color: #cc6733;
+    animation: backgrounder 30s linear infinite;
+  }
+  section:nth-of-type(2) {
+    background-color: #cc9b33;
+    animation: backgrounder 30s linear infinite;
+  }
+  section:nth-of-type(3) {
+    background-color: #c9cc33;
+    animation: backgrounder 30s linear infinite;
+  }
+  section:nth-of-type(4) {
+    background-color: #95cc33;
+    animation: backgrounder 30s linear infinite;
+  }
+  section:nth-of-type(5) {
+    background-color: #61cc33;
+    animation: backgrounder 30s linear infinite;
+  }
+  section .section-heading {
+    position: sticky;
+    top: 60px;
+    width: 100%;
+    background-color: rgba(245, 245, 245, 0.3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9996;
+  }
+  
+  footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 200px 0;
+    background-color: #333;
+    color: white;
+  }
+  
+  .grid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+  @media (min-width: 48rem) {
+    .grid-container {
+      padding: 0 20px;
+    }
+  }
+  .grid-container.full {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  @media (min-width: 48rem) {
+    .grid-container.full {
+      padding: 0 20px;
+    }
+  }
+  .grid-container .grid-x {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  @media (min-width: 48rem) {
+    .grid-container .grid-x {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  .grid-container .grid-x.align-left {
+    justify-content: flex-start;
+  }
+  .grid-container .grid-x.align-right {
+    justify-content: flex-end;
+  }
+  .grid-container .grid-x.align-justify {
+    justify-content: space-between;
+  }
+  .grid-container .grid-x.align-top {
+    align-items: flex-start;
+  }
+  .grid-container .grid-x.align-bottom {
+    align-items: flex-end;
+  }
+  .grid-container .grid-x.align-middle {
+    align-items: center;
+  }
+  .grid-container .grid-x.align-center {
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-container .grid-x.grid-margin-x .cell {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .grid-container .grid-x.grid-padding-x .cell {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .grid-container .grid-x.grid-margin-y .cell {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .grid-container .grid-x.grid-padding-y .cell {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .cell {
+    display: block;
+    width: 100%;
+  }
+  @media (min-width: 20rem) {
+    .cell.small-1 {
+      width: 8.3333%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-2 {
+      width: 16.6666%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-3 {
+      width: 25%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-4 {
+      width: 33.3333%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-5 {
+      width: 41.6666%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-6 {
+      width: 50%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-7 {
+      width: 58.3333%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-8 {
+      width: 66.6666%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-9 {
+      width: 75%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-10 {
+      width: 83.3333%;
+    }
+  }
+  @media (min-width: 20rem) {
+    .cell.small-11 {
+      width: 91.666612%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-1 {
+      width: 8.3333%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-2 {
+      width: 16.6666%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-3 {
+      width: 25%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-4 {
+      width: 33.3333%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-5 {
+      width: 41.6666%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-6 {
+      width: 50%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-7 {
+      width: 58.3333%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-8 {
+      width: 66.6666%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-9 {
+      width: 75%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-10 {
+      width: 83.3333%;
+    }
+  }
+  @media (min-width: 48rem) {
+    .cell.medium-11 {
+      width: 91.666612%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-1 {
+      width: 8.3333%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-2 {
+      width: 16.6666%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-3 {
+      width: 25%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-4 {
+      width: 33.3333%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-5 {
+      width: 41.6666%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-6 {
+      width: 50%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-7 {
+      width: 58.3333%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-8 {
+      width: 66.6666%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-9 {
+      width: 75%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-10 {
+      width: 83.3333%;
+    }
+  }
+  @media (min-width: 64rem) {
+    .cell.large-11 {
+      width: 91.666612%;
+    }
+  }
+  .cell.align-self-right {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .cell.align-self-left {
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .top-bar .grid-x {
+    flex-wrap: nowrap;
+  }
+  .main{
+    grid-area: main;
+    height: 100%;
+  }
+  .footer{
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*Home Screen*/
+
+  a:hover{
+    color: deeppink;
+
+  }
+  .products{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .products li{
+    list-style-type: none;
+    padding: 0;    
+    flex: 0 1 18rem;
+    margin: 1rem;
+    height: 30rem;
+    border-bottom: .1rem #c0c0c0 solid;
+  }
+  .product{
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+  }
+  .product-name{
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .product-brand{
+    font-size: 1.2rem;
+    color: #808080;
+  }
+  .product-price{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  .product-image{
+    max-width: 20rem;
+    max-height: 20rem;
+  }
+  .product-rating{
+    font-weight: bold;
+  }
